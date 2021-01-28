@@ -1,0 +1,17 @@
+<div class="container" style="margin-top: 2%;margin-bottom: 2%;">
+    <%= form_tag("/post_form_client", method: "post") do %>
+        <div class="form-group">
+            <%= label_tag(:name, "Nome:") %>
+            <%= text_field_tag :name, nil, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= label_tag(:cpf, "CPF:") %>
+            <%= text_field_tag :cpf, nil, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= label_tag(:email, "E-mail:") %>
+            <%= text_field_tag :email, nil, class: "form-control" %>
+        </div>
+        <%= submit_tag "Cadastrar", class: "btn btn-success" %>
+    <% end %>
+</div>

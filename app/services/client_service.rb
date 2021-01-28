@@ -2,16 +2,17 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-class ApiService
-  uri = URI.parse("https://pitzi-api.herokuapp.com/clients")
-  
+class ClientService
+
   ApiServiceData = Struct.new(:name, :cpf, :email, keyword_init: true)
   
   def initialize(name, cpf, email)
     @data = ApiServiceData.new(name: name, cpf: cpf, email: email)
   end
   
-  def post_call
+  def post_client
+    uri = URI.parse("https://pitzi-api.herokuapp.com/clients")
+
     request = Net::HTTP::Post.new(uri)
     request.content_type = "application/json"
     request["Accept"] = "application/json"
