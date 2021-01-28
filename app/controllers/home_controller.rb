@@ -21,7 +21,7 @@ class HomeController < ApplicationController
     cpf = params[:cpf]
   
     SignatureService.new(cellphone_model, imei, price, number_portion, cpf).post_signature
-    binding.pry
+    
     redirect_to home_path
   end
 end
