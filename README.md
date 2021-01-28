@@ -28,8 +28,7 @@ Abra o seu navegador(de preferência Chrome ou Firefox) e navegue para `localhos
 
 ## Deploy Heroku
 
-```sh
 https://pitzi-app.herokuapp.com/
-```
+
 
 
